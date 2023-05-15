@@ -59,22 +59,12 @@ function generateCoins(cents){
     let numOfN = 0;
     let numOfP =0;
     while(cents>0){
+        console.log(cents);
         if(cents%25==0){
             numOfQ +=1;
             cents-=25;
-        }
-        else if(cents%10==0){
-            numOfD +=1;
-            cents-=10;
-
-        }
-        else if(cents%5==0){
-            numOfN +=1;
-            cents-=5;
-
-        } else {
-            numOfP = cents;
-            return;
+            console.log(cents);
+            break;
         }
     }
     console.log("numOfQ: ", numOfQ);
